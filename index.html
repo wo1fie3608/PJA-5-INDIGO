@@ -741,6 +741,25 @@
             background: var(--navy);
             color: var(--white);
         }
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        
+        .feature-text h4 {
+            font-size: 16px;
+        }
+        
+        .feature-text p {
+            font-size: 13px;
+        }
+        
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
 
         .features .section-title,
         .features h3 {
@@ -753,9 +772,20 @@
 
         .features-grid {
             display: grid;
-            gap: 32px 48px;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
+        @media (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }        
 
         .feature-item {
             display: flex;
@@ -1354,7 +1384,7 @@
     <section class="cta" id="contact">
         <div class="container">
             <div class="fade-in">
-                <h2 class="section-title">Request Private Viewing</h2>
+                <h2 class="section-title">Request More Details</h2>
                 <p>Experience Indigo Ocean in person. Limited availability.</p>
                 <form class="cta-form" id="contactForm">
                     <div class="form-group">
@@ -1373,7 +1403,7 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="4" placeholder="Tell us about your interest"></textarea>
                     </div>
-                    <button type="submit" class="btn">Schedule Viewing</button>
+                    <button type="submit" class="btn">Schedule Meeting</button>
                 </form>
             </div>
         </div>
